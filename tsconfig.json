@@ -1,0 +1,14 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": "./",
+        "esModuleInterop": true,
+        "jsx": "react",
+        "module": "CommonJS",
+        "outDir": "build",
+        "target": "ES5",
+        "types": ["node", "jest"]
+    },
+    "exclude": ["node_modules"]
+}
