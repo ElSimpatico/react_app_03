@@ -1,6 +1,5 @@
-import { TestState, GMapState } from './models';
+import { TestState } from './models';
 
 export interface State {
     test: TestState;
-    gMap: GMapState;
 }
