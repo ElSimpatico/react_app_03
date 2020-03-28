@@ -18,9 +18,23 @@ const commonConfiguration: Configuration = {
     module: {
         rules: [
             {
+                test: /.jsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-react']
+                    }
+                }
+            },
+            {
                 test: /.tsx?$/,
                 exclude: /node_modules/,
                 loader: 'awesome-typescript-loader'
+            },
+            {
+                test: /\.s?css$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     },
