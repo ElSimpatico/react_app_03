@@ -1,8 +1,9 @@
 import React, { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useStyles } from './styles';
 import { TripCardProps } from './trip-card-props';
+
+import './styles.css';
 
 export function TripCard({
     driver,
@@ -10,21 +11,18 @@ export function TripCard({
     selected,
     onTripCard
 }: TripCardProps): ReactElement<TripCardProps> {
-    const classes = useStyles();
     const [t] = useTranslation('common');
 
     return (
         <div
-            className={`${classes.tripCard} ${
-                selected ? classes.selectedTrip : ''
-            }`}
+            className={`${'trip-card'} ${selected ? 'selected-trip' : ''}`}
             onClick={onTripCard}
         >
-            <div className={classes.tripCardContent}>
-                <div className={classes.tripCardItem}>
+            <div>
+                <div>
                     <div>{`${t('driver')}: ${driver}`}</div>
                 </div>
-                <div className={classes.tripCardItem}>
+                <div>
                     <div>{`${t('description')}: ${description}`}</div>
                 </div>
             </div>

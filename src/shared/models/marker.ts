@@ -1,8 +1,11 @@
+export interface MarkerPosition {
+    lat: number;
+    lng: number;
+}
+
 export interface Marker {
-    position: {
-        lat: number;
-        lng: number;
-    };
+    position: MarkerPosition;
     stopId?: string;
     address?: string;
+    date?: Date;
 }

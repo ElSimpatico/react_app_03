@@ -1,13 +1,11 @@
-import React, { ReactElement } from 'react';
-import { CircularProgress } from '@material-ui/core';
+import React, { ReactElement, useEffect } from 'react';
 
-import { useStyles } from './styles';
+import './styles.css';
 
-export function Spinner(): ReactElement {
-    const classes = useStyles();
+export function Spinner({ size }: any): ReactElement {
     return (
-        <div className={classes.wrapper}>
-            <CircularProgress />
+        <div className={'wrapper'}>
+            <div className={`spinner ${size ? `spinner-${size}` : ''}`} />
         </div>
     );
 }
