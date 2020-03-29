@@ -7,7 +7,7 @@ import { getPathPropertyOr } from '../../shared/utils/functional';
 import { getStop } from '../../services';
 
 import { InfoWindowContent } from './info-window-content/info-window-content';
-import { Spinner } from '../spinner/spinner';
+import { Spinner, SPINNER_SIZE } from '../spinner';
 
 import './styles.css';
 
@@ -17,7 +17,7 @@ let markersMap = [];
 let polyline = null;
 let infoWindow = null;
 const INFO_WINDOW_LOADING = `${renderToStaticMarkup(
-    <Spinner size={'small'} />
+    <Spinner size={SPINNER_SIZE.SMALL} />
 ).toString()}`;
 
 export function GMap({ center, zoom, markers, route }) {
