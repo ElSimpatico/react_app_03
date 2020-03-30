@@ -1,4 +1,4 @@
-# react_app_03
+# Seat:Code Test
 
 This project was been created with the aim of implementing a solution Seat Test.
 
@@ -57,8 +57,12 @@ It correctly bundles React in development mode.
 
 ### `yarn serve`
 
-Runs the app in the development mode.
+Run the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.
 You will also see any errors in the console.
+
+### `yarn test`
+
+Run the test app to view the coverage of code.
