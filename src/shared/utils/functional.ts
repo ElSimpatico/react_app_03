@@ -8,14 +8,14 @@ export function getPathPropertyOr(
     let currentObj: any = obj;
 
     while (existProperty && index < properties.length) {
+        if (typeof currentObj !== 'object') {
+            existProperty = false;
+            break;
+        }
         currentObj = currentObj[properties[index]];
         existProperty = currentObj !== null && currentObj !== undefined;
-        if (existProperty) {
-            index++;
-        } else {
-            currentObj = defaultValue;
-        }
+        index++;
     }
 
-    return currentObj;
+    return existProperty ? currentObj : defaultValue;
 }

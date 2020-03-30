@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 const loadedScripts: string[] = [];
 
 export async function loadScript(src: string): Promise<any> {
@@ -11,7 +13,9 @@ export async function loadScript(src: string): Promise<any> {
                 loadedScripts.push(src);
                 resolve(true);
             };
-            script.onerror = err => reject(err);
+            script.onerror = err => {
+                reject(err);
+            };
 
             document.body.append(script);
         }
